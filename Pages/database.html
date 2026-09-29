@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE - BHUMI Agronomic Intelligence</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="database.css">
+    <link rel="stylesheet" href="../language.css">
+</head>
+
+<body>
+
+    <!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+
+    <a href="../index.html" class="mobile-nav-item">
+        <span class="mobile-nav-icon">⌂</span>
+        <span>Home</span>
+    </a>
+
+    <a href="services.html" class="mobile-nav-item">
+        <span class="mobile-nav-icon">🌱</span>
+        <span>Grow</span>
+    </a>
+
+    <a href="database.html" class="mobile-nav-item active">
+        <span class="mobile-nav-icon">▤</span>
+        <span>Database</span>
+    </a>
+
+    <a href="contact.html" class="mobile-nav-item">
+        <span class="mobile-nav-icon">↗</span>
+        <span>Connect</span>
+    </a>
+
+</nav>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <span class="hindi">भूमि</span>
+                    <span class="english">BHUMI</span>
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="database.html" class="nav-link active" style="color: #2F7D46; font-weight: 700;">DATABASE</a>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="db-main">
+        <!-- Hero Section -->
+        <section class="db-hero">
+            <span class="db-tag">✦ AGRONOMIC INTELLIGENCE ENGINE</span>
+            <h1>Regional Crop <span class="highlight">Agronomy Database</span></h1>
+            <p>
+                Scientifically vetted, economically viable crops categorized by district soil chemistry,
+                NPK fertilizer schedules, and seasonal cultivation requirements.
+            </p>
+
+            <!-- Metrics -->
+            <div class="db-stats-strip">
+                <div class="stat-pill">
+                    <span class="num" id="stat-districts">3</span>
+                    <span class="lbl">Districts<br>Profiled</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="num" id="stat-crops">30</span>
+                    <span class="lbl">Vetted Crop<br>Dossiers</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="num">100%</span>
+                    <span class="lbl">Precision NPK &<br>Soil Formulations</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls: District Tabs & Live Search -->
+        <section class="db-controls">
+            <div class="controls-top">
+                <div class="district-tabs" id="district-tabs">
+                    <button class="tab-btn active" data-district="all">All Districts</button>
+                    <button class="tab-btn" data-district="sangli">Sangli</button>
+                    <button class="tab-btn" data-district="satara">Satara</button>
+                    <button class="tab-btn" data-district="nashik">Nashik</button>
+                </div>
+
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="db-search-input" placeholder="Search by crop, scientific name, or soil...">
+                </div>
+            </div>
+
+            <!-- District Soil Context Banner -->
+            <div class="district-spotlight" id="district-spotlight" style="display: none;">
+                <div class="spotlight-box">
+                    <div class="spotlight-title">
+                        <span class="badge-tag">District Profile</span>
+                        <h3 id="spotlight-district-name">Sangli</h3>
+                    </div>
+                    <div class="spotlight-body">
+                        <p><strong>Predominant Soils:</strong> <span id="spotlight-soils"></span></p>
+                        <p><strong>Chemical Profile:</strong> <span id="spotlight-chemistry"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crop Cards Grid -->
+        <section class="crops-grid-container">
+            <div class="crops-grid" id="crops-grid">
+                <!-- Dynamically populated via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Huge Card / Crop Dossier Modal -->
+    <div id="dossier-modal" class="dossier-modal-overlay" style="display: none;">
+        <div class="huge-crop-card">
+            <button id="modal-close-btn" class="huge-card-close" title="Close Dossier">&times;</button>
+            
+            <div class="huge-card-head">
+                <div class="huge-head-tags">
+                    <span class="huge-district-tag" id="modal-district">Sangli</span>
+                    <span class="huge-score-tag" id="modal-rating">★ 9.6 / 10</span>
+                </div>
+                <h2 id="modal-crop-name">Turmeric</h2>
+                <div class="scientific" id="modal-scientific">Curcuma longa</div>
+            </div>
+
+            <div class="huge-sections-grid">
+                <div class="huge-info-block">
+                    <h4>🌱 Cultivation Calendar</h4>
+                    <p><strong>Growing Season:</strong> <span id="modal-season"></span></p>
+                    <p><strong>Target Soil Type:</strong> <span id="modal-soil"></span></p>
+                </div>
+
+                <div class="huge-info-block">
+                    <h4>⚖️ Fertilizer Formulation (NPK)</h4>
+                    <div class="npk-badge-strip">
+                        <span class="npk-val" id="modal-npk">200:100:100</span>
+                        <span class="npk-unit">kg/ha dose</span>
+                    </div>
+                    <p><strong>Organic Manure:</strong> <span id="modal-manure"></span></p>
+                    <p><strong>Secondary & Micronutrients:</strong> <span id="modal-micronutrients"></span></p>
+                </div>
+            </div>
+
+            <div class="huge-full-block">
+                <h4>📋 Application Schedule & Agronomic Rationale</h4>
+                <p id="modal-schedule"></p>
+            </div>
+
+            <div class="huge-card-footer">
+                <button id="modal-done-btn" class="huge-close-btn">Close Dossier</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Data Loading Script -->
+    <script src="../language.js"></script>
+    <script>
+        let allCrops = [];
+        let districtProfiles = {};
+        let activeDistrict = "all";
+
+        async function initDatabase() {
+            try {
+                const response = await fetch("../Data/crops.json");
+                if (!response.ok) throw new Error("Could not load Data/crops.json");
+                const data = await response.json();
+                
+                const districts = data?.regional_crop_agronomy_database?.districts || [];
+                
+                let cropCount = 0;
+                districts.forEach(d => {
+                    const dKey = d.district_name.toLowerCase();
+                    districtProfiles[dKey] = {
+                        name: d.district_name,
+                        soils: d.predominant_soil_types.join(" • "),
+                        chemistry: d.soil_chemical_profile
+                    };
+
+                    (d.viable_recommended_crops || []).forEach(crop => {
+                        cropCount++;
+                        allCrops.push({
+                            ...crop,
+                            districtName: d.district_name,
+                            districtKey: dKey
+                        });
+                    });
+                });
+
+                document.getElementById("stat-districts").textContent = districts.length;
+                document.getElementById("stat-crops").textContent = cropCount;
+
+                renderCrops();
+            } catch (err) {
+                console.error("Database loading error:", err);
+                document.getElementById("crops-grid").innerHTML = `
+                    <div class="no-crops-found">
+                        <h3>Error Loading Crops</h3>
+                        <p>Unable to load Data/crops.json. Please make sure the data file is present.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderCrops() {
+            const grid = document.getElementById("crops-grid");
+            const searchVal = (document.getElementById("db-search-input").value || "").toLowerCase().trim();
+
+            const filtered = allCrops.filter(crop => {
+                const matchesDistrict = activeDistrict === "all" || crop.districtKey === activeDistrict;
+                const matchesSearch = !searchVal || 
+                    crop.crop_name.toLowerCase().includes(searchVal) ||
+                    (crop.scientific_name && crop.scientific_name.toLowerCase().includes(searchVal)) ||
+                    (crop.growing_season && crop.growing_season.toLowerCase().includes(searchVal)) ||
+                    (crop.target_soil_type && crop.target_soil_type.toLowerCase().includes(searchVal)) ||
+                    crop.districtName.toLowerCase().includes(searchVal);
+
+                return matchesDistrict && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-crops-found">
+                        <h3>No Matching Crops Found</h3>
+                        <p>Try searching for another crop name or select "All Districts".</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map((crop, index) => `
+                <div class="db-crop-card" onclick="openHugeCard(${allCrops.indexOf(crop)})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHugeCard(${allCrops.indexOf(crop)});}" role="button" tabindex="0">
+                    <div class="card-top-meta">
+                        <span class="card-district-pill">${crop.districtName}</span>
+                        <span class="card-rating-badge">★ ${crop.suitability_rating}</span>
+                    </div>
+                    <div class="crop-card-header">
+                        <h2>${crop.crop_name}</h2>
+                    </div>
+                    <div class="card-action-cue">
+                        <span>View Full Dossier</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function openHugeCard(cropIndex) {
+            const crop = allCrops[cropIndex];
+            if (!crop) return;
+
+            document.getElementById("modal-district").textContent = crop.districtName;
+            document.getElementById("modal-rating").textContent = `★ ${crop.suitability_rating}`;
+            document.getElementById("modal-crop-name").textContent = crop.crop_name;
+            document.getElementById("modal-scientific").textContent = crop.scientific_name;
+            document.getElementById("modal-season").textContent = crop.growing_season;
+            document.getElementById("modal-soil").textContent = crop.target_soil_type;
+
+            const fert = crop.fertilizer_requirements || {};
+            document.getElementById("modal-npk").textContent = fert.recommended_npk_kg_per_ha || "Standard NPK";
+            document.getElementById("modal-manure").textContent = fert.organic_manure || "Organic manure as recommended";
+            document.getElementById("modal-micronutrients").textContent = fert.secondary_and_micronutrients || "Standard micronutrients";
+            document.getElementById("modal-schedule").textContent = fert.application_schedule_and_rationale || "Balanced phased application.";
+
+            const modal = document.getElementById("dossier-modal");
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent background scrolling
+        }
+
+        function closeHugeCard() {
+            const modal = document.getElementById("dossier-modal");
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Event Listeners
+        document.getElementById("modal-close-btn").addEventListener("click", closeHugeCard);
+        document.getElementById("modal-done-btn").addEventListener("click", closeHugeCard);
+
+        document.getElementById("dossier-modal").addEventListener("click", (e) => {
+            if (e.target.id === "dossier-modal") {
+                closeHugeCard();
+            }
+        });
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeHugeCard();
+            }
+        });
+
+        // Search Input
+        document.getElementById("db-search-input").addEventListener("input", renderCrops);
+
+        // District Tabs
+        const tabs = document.querySelectorAll(".tab-btn");
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                tab.classList.add("active");
+                activeDistrict = tab.dataset.district;
+
+                const spotlight = document.getElementById("district-spotlight");
+                if (activeDistrict !== "all" && districtProfiles[activeDistrict]) {
+                    const profile = districtProfiles[activeDistrict];
+                    document.getElementById("spotlight-district-name").textContent = profile.name;
+                    document.getElementById("spotlight-soils").textContent = profile.soils;
+                    document.getElementById("spotlight-chemistry").textContent = profile.chemistry;
+                    spotlight.style.display = "block";
+                } else {
+                    spotlight.style.display = "none";
+                }
+
+                renderCrops();
+            });
+        });
+
+        // Initialize on load
+        window.addEventListener("DOMContentLoaded", initDatabase);
+    </script>
+</body>
+
+</html>

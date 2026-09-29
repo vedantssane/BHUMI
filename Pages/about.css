@@ -1,0 +1,495 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.title h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+#about {
+    color: #1b5e20;
+    margin-right: 18px;
+}
+
+#bhumi {
+    color: #8bc34a;
+}
+
+.subtitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.subtitle h1 {
+    margin: 0;
+    font-size: clamp(22px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+#sub_about_1 {
+    color: #183d1b;
+}
+
+#sub_about_2 {
+    color: #4f8f45;
+    font-weight: 700;
+}
+
+.body-msg {
+    max-width: 950px;
+    margin: 35px auto 0;
+    padding: 0 25px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.9;
+    letter-spacing: 0.2px;
+    color: #536153;
+    font-weight: 400;
+}
+
+#bdy-msg-1 {
+    color: #1d541f;
+    font-weight: 800;
+}
+
+#bdy-msg-2 {
+    color: #7a8779;
+    font-size: 15px;
+    font-style: italic;
+}
+
+#bdy-msg-3 {
+    color: #3f513f;
+    font-weight: 500;
+}
+
+#bdy-msg-4 {
+    color: #465746;
+}
+
+#bdy-msg-5 {
+    color: #607060;
+}
+
+.about-section {
+    width: 100%;
+    margin:20px;
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+.section-divider {
+    width: 85%;
+    margin: 80px auto 60px;
+    border: none;
+    border-top: 1px solid rgba(49, 84, 61, 0.2);
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.abt-card {
+    width: 100%;
+    max-width: 730px;
+    height: 300px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+
+    background: linear-gradient(to right, rgb(37, 182, 126), rgb(154, 224, 146));
+    border-radius: 32px;
+
+    box-shadow: 0 20px 50px rgba(20, 60, 30, 0.12);
+
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.abt-card:hover{
+    transform:rotate(-1deg);
+    cursor:pointer;
+}
+
+/* IMAGE */
+
+.abt-image {
+    width: 75%;
+    height: 100%;
+
+    flex-shrink: 0;
+    overflow: hidden;
+
+    transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.abt-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+
+/* TITLE - RIGHT SIDE */
+
+.abt-title {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 25%;
+    height: 100%;
+
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    background: linear-gradient(to right, rgb(37, 182, 126), rgb(154, 224, 146));
+    transition:
+        opacity 0.35s ease,
+        transform 0.6s ease;
+}
+
+.abt-title h2 {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #050505;
+}
+
+.abt-title span,
+.abt-content span {
+    color: #e24724;
+}
+
+/* CONTENT */
+
+.abt-content {
+    width: 75%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    padding: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 0;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.6s ease;
+
+    pointer-events: none;
+}
+
+.abt-content h2 {
+    margin: 0 0 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #050505;
+}
+
+.abt-content p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+    line-height: 1.9;
+
+    color: #31543d;
+}
+
+.abt-content strong {
+    color: #087d38;
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.abt-card:hover .abt-image {
+    width: 25%;
+}
+
+.abt-card:hover .abt-title {
+    opacity: 0;
+    transform: translateX(30px);
+    pointer-events: none;
+}
+
+.abt-card:hover .abt-content {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.abt-card:hover {
+    transform: translateX(8px);
+}
+
+.abt-card:hover .abt-image img {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   BHUMI MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-bottom-nav {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        display: none !important;
+    }
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        overflow-x: hidden;
+
+        padding-bottom: 100px;
+    }
+
+    .mobile-bottom-nav {
+
+        position: fixed;
+
+        display: flex;
+
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+
+        height: 70px;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        border: 1px solid #e4ebe1;
+
+        border-radius: 21px;
+
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.13);
+
+        z-index: 10000;
+
+        padding: 5px;
+    }
+
+    .mobile-nav-item {
+
+        position: relative;
+
+        width: 25%;
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 3px;
+
+        text-decoration: none;
+
+        color: #667066;
+
+        font-family: Arial, sans-serif;
+
+        font-size: 10px;
+        font-weight: 600;
+
+        border-radius: 16px;
+
+        transition: 0.2s ease;
+    }
+
+    .mobile-nav-icon {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 21px;
+
+        line-height: 1;
+    }
+
+    .mobile-nav-item.active {
+
+        color: #176b4d;
+
+        background: #f1f8ee;
+    }
+
+    .mobile-nav-item.active::after {
+
+        content: "";
+
+        position: absolute;
+
+        bottom: 3px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 22px;
+        height: 3px;
+
+        border-radius: 10px;
+
+        background: #176b4d;
+    }
+
+    .mobile-nav-item:active {
+        transform: scale(0.94);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    body {
+        background: #f7faf5;
+    }
+
+    .title {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .subtitle {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .subtitle h2 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .body-msg {
+        padding: 0 22px;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+
+        padding: 0 15px;
+    }
+
+    .abt-card {
+        width: 100%;
+        height: 240px;
+
+        border-radius: 22px;
+
+        overflow: hidden;
+    }
+
+    .abt-image,
+    .abt-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .abt-title {
+        width: 100%;
+
+        bottom: 0;
+        top: auto;
+        right: 0;
+
+        padding: 18px;
+
+        background: linear-gradient(
+            to top,
+            rgba(20, 75, 48, 0.95),
+            rgba(20, 75, 48, 0)
+        );
+
+        color: white;
+    }
+
+    .abt-title h2 {
+        font-size: 24px;
+    }
+
+    .abt-content {
+        padding: 22px;
+
+        background: #176b4d;
+
+        color: white;
+    }
+
+    .abt-content h2 {
+        font-size: 24px;
+    }
+
+    .abt-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+}

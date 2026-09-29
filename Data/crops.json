@@ -1,0 +1,431 @@
+{
+  "regional_crop_agronomy_database": {
+    "version": "3.0",
+    "description": "Expanded agronomic database of scientifically vetted, economically viable crops categorized by soil profile and district.",
+    "districts": [
+      {
+        "district_name": "Sangli",
+        "predominant_soil_types": [
+          "Deep to Medium Black Soils (Vertisols / Vertic Haplustepts)",
+          "Coarse Shallow Mixed Red-Brown Soils (Lithic Ustorthents / Malran)",
+          "Alluvial Loams along the Krishna River Basin"
+        ],
+        "soil_chemical_profile": "pH 7.6 - 8.4 (mildly to moderately alkaline), high CEC (35-50 cmol/kg), high potassium reserves, low available phosphorus (fixation via free CaCO3), low organic carbon (<0.45%), prone to Iron (Fe) and Zinc (Zn) deficiencies.",
+        "viable_recommended_crops": [
+          {
+            "crop_name": "Turmeric",
+            "scientific_name": "Curcuma longa",
+            "growing_season": "Kharif (Planting: May-June; Harvest: Jan-March)",
+            "target_soil_type": "Deep well-drained alluvial medium black loams",
+            "suitability_rating": "9.6 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "200:100:100",
+              "organic_manure": "FYM @ 25 tonnes/ha or enriched pressmud @ 10 tonnes/ha",
+              "secondary_and_micronutrients": "Ferrous Sulphate (FeSO4) @ 25 kg/ha + Zinc Sulphate (ZnSO4) @ 25 kg/ha basal; Elemental Sulphur @ 30 kg/ha",
+              "application_schedule_and_rationale": "Basal: 100% P, 100% K, 33% N. Split top-dressing: 33% N at 45 DAP and 33% N at 90 DAP during earthing up. Micronutrients offset lime-induced chlorosis in high-pH Krishna river loams."
+            }
+          },
+          {
+            "crop_name": "Table Grapes",
+            "scientific_name": "Vitis vinifera",
+            "growing_season": "Perennial (Foundation pruning: April; Fruit pruning: October)",
+            "target_soil_type": "Gravelly light-to-medium black soils with EC < 1.0 dS/m and rapid drainage",
+            "suitability_rating": "9.7 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "150:80:180 (fertigation equivalent)",
+              "organic_manure": "Well-cured FYM @ 20 tonnes/ha or vermicompost @ 5 tonnes/ha post-October pruning",
+              "secondary_and_micronutrients": "Magnesium Sulphate @ 30 kg/ha; Boron foliar spray (0.1%) pre-bloom; Zinc Sulphate @ 15 kg/ha",
+              "application_schedule_and_rationale": "Vegetative phase (post-April): 40% N, 100% P, 30% K. Reproductive phase (post-October): 60% N, 70% K applied via drip fertigation from bud burst through veraison to maximize TSS accumulation."
+            }
+          },
+          {
+            "crop_name": "Sugarcane",
+            "scientific_name": "Saccharum officinarum",
+            "growing_season": "Pre-seasonal (Oct-Nov) / Suru (Jan-Feb)",
+            "target_soil_type": "Deep moisture-retentive black Vertisols (Krishna valley)",
+            "suitability_rating": "9.2 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "340:170:170 (Pre-seasonal dose)",
+              "organic_manure": "FYM @ 25 tonnes/ha or pressmud cake @ 12 tonnes/ha",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 25 kg/ha, FeSO4 @ 25 kg/ha, Elemental Sulphur @ 40 kg/ha",
+              "application_schedule_and_rationale": "10% N, 50% P, 50% K at planting; 40% N at tillering (6-8 weeks); 10% N, 50% P, 50% K at mini-earthing up; 40% N at big earthing up (120-135 DAP)."
+            }
+          },
+          {
+            "crop_name": "Pomegranate",
+            "scientific_name": "Punica granatum",
+            "growing_season": "Perennial (Mrid Bahar: June flowering; Hasta Bahar: Sept-Oct flowering)",
+            "target_soil_type": "Light, coarse gravelly soils with rapid sub-drainage (Atpadi, Jath, Kavathe Mahankal)",
+            "suitability_rating": "9.3 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "250:125:150 (400:200:250 g N:P2O5:K2O per bearing tree/year)",
+              "organic_manure": "FYM @ 20 kg/tree + Neem cake @ 2 kg/tree during stress break",
+              "secondary_and_micronutrients": "Solubor (Boron) @ 1.5 g/L and Zinc EDTA @ 1 g/L foliar spray during anthesis",
+              "application_schedule_and_rationale": "100% P and organic manures incorporated at defoliation; N and K fertigated weekly in splits until 30 days before harvest to prevent fruit splitting."
+            }
+          },
+          {
+            "crop_name": "Dragon Fruit (Pitaya)",
+            "scientific_name": "Selenicereus undatus",
+            "growing_season": "Perennial (Flowering & Fruiting: May to October)",
+            "target_soil_type": "Shallow, rocky, coarse gravelly soils (pH 6.5 - 8.2) with rapid drainage",
+            "suitability_rating": "9.4 / 10 (Eastern Drought-Prone Talukas)",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "150:100:150 (approx. 450:300:450 g N:P2O5:K2O per concrete pole/4 plants)",
+              "organic_manure": "FYM @ 15 kg/pole + Vermicompost @ 5 kg/pole annually in three splits",
+              "secondary_and_micronutrients": "Magnesium Sulphate @ 50 g/pole; Calcium Nitrate @ 50 g/pole to enhance fruit firmness",
+              "application_schedule_and_rationale": "Split into four intervals: pre-flowering (April), fruit development (June, August), and post-harvest maintenance (October). Avoid excessive nitrogen during monsoon flushes to prevent cladode rot."
+            }
+          },
+          {
+            "crop_name": "Soybean",
+            "scientific_name": "Glycine max",
+            "growing_season": "Kharif (June-July to Sept-Oct)",
+            "target_soil_type": "Medium black soils with adequate subsoil aeration (Walwa, Shirala, Miraj)",
+            "suitability_rating": "9.1 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "30:60:30",
+              "organic_manure": "FYM @ 5 tonnes/ha + Bradyrhizobium seed treatment",
+              "secondary_and_micronutrients": "Bentonite Sulphur @ 25 kg/ha (or Gypsum @ 200 kg/ha)",
+              "application_schedule_and_rationale": "Entire N, P, K, and Sulphur applied 5 cm beside and below the seed line at sowing. Sulphur drives oil synthesis and protein content."
+            }
+          },
+          {
+            "crop_name": "Bengal Gram (Chickpea)",
+            "scientific_name": "Cicer arietinum",
+            "growing_season": "Rabi (Sowing: Oct-Nov; Harvest: Feb-March)",
+            "target_soil_type": "Medium to deep black soils retaining post-monsoon subsoil moisture",
+            "suitability_rating": "9.1 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "25:50:00",
+              "organic_manure": "Rhizobium + PSB seed inoculants @ 250 g/10 kg seed",
+              "secondary_and_micronutrients": "Sulphur @ 20 kg/ha",
+              "application_schedule_and_rationale": "100% basal placement at 8-10 cm depth. Low nitrogen encourages native atmospheric nitrogen fixation."
+            }
+          },
+          {
+            "crop_name": "Hot Pepper / Chilli",
+            "scientific_name": "Capsicum annuum",
+            "growing_season": "Kharif (June-Oct) & Summer (Jan-May)",
+            "target_soil_type": "Well-drained light to medium black clay loams",
+            "suitability_rating": "8.8 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "150:75:75 (for irrigated hybrids)",
+              "organic_manure": "FYM @ 15 tonnes/ha",
+              "secondary_and_micronutrients": "Calcium Nitrate @ 15 kg/ha; Zinc Sulphate @ 15 kg/ha basal; Boron foliar spray @ 0.1% at flowering",
+              "application_schedule_and_rationale": "50% N + 100% PK basal; remaining 50% N split at 30 and 50 days after transplanting (DAT). Boron prevents flower drop under high summer thermal stress."
+            }
+          },
+          {
+            "crop_name": "Maize",
+            "scientific_name": "Zea mays",
+            "growing_season": "Kharif (June-July) & Rabi (Oct-Nov)",
+            "target_soil_type": "Well-drained medium black loams and silt loams",
+            "suitability_rating": "8.9 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "120:60:40",
+              "organic_manure": "FYM @ 10 tonnes/ha",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 20 kg/ha basal (prevents 'white bud' physiological deficiency in alkaline soils)",
+              "application_schedule_and_rationale": "33% N + 100% PK basal; 33% N top-dressed at knee-high stage (30 DAS); 33% N top-dressed at tasseling stage (50-55 DAS)."
+            }
+          },
+          {
+            "crop_name": "Papaya",
+            "scientific_name": "Carica papaya",
+            "growing_season": "Spring (Feb-March) / Monsoon (June-July)",
+            "target_soil_type": "Medium black alluvial loams (minimum 60 cm depth) with zero waterlogging risk",
+            "suitability_rating": "8.7 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "200g N : 200g P2O5 : 250g K2O per plant/year (~500:500:625 kg/ha equivalent)",
+              "organic_manure": "FYM @ 10 kg/plant at pit preparation",
+              "secondary_and_micronutrients": "Borax @ 5 g/plant foliar (prevents bumpy fruit deformity); Zinc Sulphate @ 10 g/plant",
+              "application_schedule_and_rationale": "Applied bimonthly in 6 equal splits starting from the 2nd month post-transplanting. High potassium maintains fruit firmness, skin integrity, and Brix value."
+            }
+          }
+        ]
+      },
+      {
+        "district_name": "Satara",
+        "predominant_soil_types": [
+          "Acidic Lateritic and Red Loamy Soils (Typic Hapludox / Mahabaleshwar, Patan, Jawali)",
+          "Medium to Deep Black Clay Soils (Typic Haplustepts / Vertisols / Karad, Satara plain)",
+          "Shallow Gravelly Calcareous Soils (Lithic Ustorthents / Maan, Khatav, Phaltan)"
+        ],
+        "soil_chemical_profile": "Western sub-zone: acidic (pH 4.8 - 6.2), rich in iron/aluminum oxides, low available phosphorus (chemically fixed), low calcium and magnesium. Central/Eastern sub-zone: neutral to alkaline (pH 7.2 - 8.3), high potassium, low nitrogen, prone to subsoil compaction and sodicity.",
+        "viable_recommended_crops": [
+          {
+            "crop_name": "Strawberry",
+            "scientific_name": "Fragaria × ananassa",
+            "growing_season": "Rabi (Planting: Sept-Oct; Harvest: Nov-March)",
+            "target_soil_type": "Lateritic red sandy clay loams (pH 5.5 - 6.5, Mahabaleshwar, Wai)",
+            "suitability_rating": "9.9 / 10 (GI Protected)",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "120:80:100 (via drip fertigation)",
+              "organic_manure": "Composted leaf mold or FYM @ 30 tonnes/ha into raised beds",
+              "secondary_and_micronutrients": "Agricultural Lime/Dolomite @ 2 tonnes/ha basal (corrects soil acidity); Calcium Nitrate @ 50 kg/ha via drip; Boron @ 0.1% foliar",
+              "application_schedule_and_rationale": "Basal SSP applied to beds. Early fertigation at 1:2 N:K ratio during runner development, shifting to 1:3 N:K during flower truss initiation to maximize crown and berry size."
+            }
+          },
+          {
+            "crop_name": "Soybean",
+            "scientific_name": "Glycine max",
+            "growing_season": "Kharif (June-July to Sept-Oct)",
+            "target_soil_type": "Medium black soils with adequate aeration (Karad, Koregaon, Satara)",
+            "suitability_rating": "9.4 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "30:60:30",
+              "organic_manure": "FYM @ 5 tonnes/ha + Bradyrhizobium seed inoculation",
+              "secondary_and_micronutrients": "Bentonite Sulphur @ 25 kg/ha or Gypsum @ 200 kg/ha",
+              "application_schedule_and_rationale": "100% of nutrients banded 5 cm beside and below the seed furrow at sowing. Sulphur drives oil content and nodule efficiency."
+            }
+          },
+          {
+            "crop_name": "Sugarcane",
+            "scientific_name": "Saccharum officinarum",
+            "growing_season": "Adsali (July-August) / Pre-seasonal (Oct-Nov)",
+            "target_soil_type": "Deep moisture-retentive black Vertisols along the Krishna and Koyna river basins",
+            "suitability_rating": "9.5 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "400:170:170 (for 16-18 month Adsali crop)",
+              "organic_manure": "FYM @ 30 tonnes/ha or decomposed bagasse compost @ 15 tonnes/ha",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 25 kg/ha, FeSO4 @ 25 kg/ha, Sulphur @ 50 kg/ha",
+              "application_schedule_and_rationale": "10% N, 50% PK basal; 40% N at tillering; 10% N, 50% PK at 100 days; 40% N at final earthing up (140-160 days)."
+            }
+          },
+          {
+            "crop_name": "Ginger",
+            "scientific_name": "Zingiber officinale",
+            "growing_season": "Kharif (Planting: April-May; Harvest: Dec-Feb)",
+            "target_soil_type": "Humus-rich red-laterite or gravelly medium black loams (Wai, Jawali, Satara)",
+            "suitability_rating": "9.2 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "175:75:75",
+              "organic_manure": "FYM @ 30 tonnes/ha + Neem cake @ 2 tonnes/ha (suppresses root rot complex)",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 25 kg/ha, Borax @ 10 kg/ha; Trichoderma-enriched FYM @ 2.5 tonnes/ha",
+              "application_schedule_and_rationale": "50% P and 50% K basal at planting. Nitrogen split across 40, 80, and 120 DAP, coordinated with hand-weeding and earthing up."
+            }
+          },
+          {
+            "crop_name": "Potato",
+            "scientific_name": "Solanum tuberosum",
+            "growing_season": "Kharif (Sowing: June; Harvest: Sept) & Rabi (Sowing: Oct-Nov; Harvest: Jan-Feb)",
+            "target_soil_type": "Friable, light well-aerated sandy loams and red loams (Khatav, Koregaon)",
+            "suitability_rating": "9.0 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "120:60:120",
+              "organic_manure": "Well-rotted FYM @ 20 tonnes/ha",
+              "secondary_and_micronutrients": "Magnesium Sulphate @ 25 kg/ha; Zinc Sulphate @ 15 kg/ha",
+              "application_schedule_and_rationale": "50% N + 100% P + 50% K placed in furrows before planting; remaining 50% N and 50% K applied during earthing up (30-35 DAP)."
+            }
+          },
+          {
+            "crop_name": "Finger Millet (Ragi / Nachani)",
+            "scientific_name": "Eleusine coracana",
+            "growing_season": "Kharif (Nursery: June; Transplanting: July; Harvest: Oct-Nov)",
+            "target_soil_type": "Shallow, gravelly, acidic red and lateritic hillside soils (Patan, Jawali, Mahabaleshwar foothills)",
+            "suitability_rating": "9.3 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "60:30:30",
+              "organic_manure": "FYM @ 7.5 tonnes/ha basal",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 15 kg/ha; Lime @ 500 kg/ha in high acidity zones",
+              "application_schedule_and_rationale": "50% N + 100% PK at transplanting; remaining 50% N top-dressed 3 weeks after transplanting. Tolerates poor nutrient-holding capacity of leached laterites."
+            }
+          },
+          {
+            "crop_name": "French Beans (Rajma / Shevga Sheng)",
+            "scientific_name": "Phaseolus vulgaris",
+            "growing_season": "Rabi (Oct-Jan) & Kharif (June-Aug)",
+            "target_soil_type": "Light to medium textured, well-drained loams (pH 6.0 - 7.5, Wai, Khandala)",
+            "suitability_rating": "8.9 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "90:60:60 (Phaseolus lacks native root nodulation; requires higher direct N)",
+              "organic_manure": "FYM @ 15 tonnes/ha",
+              "secondary_and_micronutrients": "Magnesium Sulphate @ 20 kg/ha; Molybdenum foliar spray @ 0.05%",
+              "application_schedule_and_rationale": "50% N + 100% PK basal; 50% N top-dressed at flowering initiation (30-35 DAS). Avoid waterlogging which causes immediate wilt."
+            }
+          },
+          {
+            "crop_name": "Rabi Sorghum (Jowar)",
+            "scientific_name": "Sorghum bicolor",
+            "growing_season": "Rabi (Sowing: Sept 15 - Oct 15; Harvest: Jan-Feb)",
+            "target_soil_type": "Deep clayey Vertisols retaining post-monsoon moisture (Maan, Phaltan)",
+            "suitability_rating": "8.8 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "50:25:25 (Rainfed) / 80:40:40 (Irrigated)",
+              "organic_manure": "FYM @ 5 tonnes/ha",
+              "secondary_and_micronutrients": "Azotobacter and PSB seed treatments; Zinc Sulphate @ 15 kg/ha",
+              "application_schedule_and_rationale": "For rainfed crops, 100% of NPK is placed 8-10 cm deep into moist soil at sowing to maximize root utilization before topsoil dries."
+            }
+          },
+          {
+            "crop_name": "Groundnut",
+            "scientific_name": "Arachis hypogaea",
+            "growing_season": "Kharif (June-Oct) & Summer (Jan-May)",
+            "target_soil_type": "Well-drained light sandy loams and friable red loams",
+            "suitability_rating": "8.7 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "25:50:00",
+              "organic_manure": "FYM @ 7.5 tonnes/ha + Rhizobium inoculum",
+              "secondary_and_micronutrients": "Gypsum @ 400 kg/ha (applied 50% at sowing, 50% at pegging stage, 40-45 DAS)",
+              "application_schedule_and_rationale": "Gypsum provides soluble Calcium in the pod zone, preventing shell pop (empty shells) and ensuring high seed oil synthesis."
+            }
+          },
+          {
+            "crop_name": "African Marigold",
+            "scientific_name": "Tagetes erecta",
+            "growing_season": "Kharif (Transplanting: July; Harvest: Sept-Oct for festival window) & Rabi (Oct to Jan)",
+            "target_soil_type": "Well-aerated medium black soils and red loamy soils (Koregaon, Satara)",
+            "suitability_rating": "9.1 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "100:100:100",
+              "organic_manure": "FYM @ 20 tonnes/ha",
+              "secondary_and_micronutrients": "Boron foliar spray @ 0.1% at flower bud initiation (prevents blind bud and enhances petal count)",
+              "application_schedule_and_rationale": "50% N + 100% PK basal; 50% N top-dressed 30-35 DAT following pinch pruning (apical decapitation) to drive branch ramification."
+            }
+          }
+        ]
+      },
+      {
+        "district_name": "Nashik",
+        "predominant_soil_types": [
+          "Medium to Deep Black Vertic Soils (Godavari, Girna, Kadva basins: Niphad, Sinnar, Yeola)",
+          "Brownish-Red Gravelly Soils / Forest Loams (Western Ghats: Igatpuri, Surgana, Peint)",
+          "Shallow Calcareous Clay Loams (Chandwad, Deola, Malegaon plateau)"
+        ],
+        "soil_chemical_profile": "Central/Eastern tracts: neutral to alkaline (pH 7.5 - 8.3), high potassium reserves, low available P and N, high free calcium carbonate (CaCO3). Western tracts (Igatpuri): slightly acidic to neutral (pH 6.2 - 6.8), leached cations, low active salinity.",
+        "viable_recommended_crops": [
+          {
+            "crop_name": "Onion",
+            "scientific_name": "Allium cepa",
+            "growing_season": "Late Kharif (Rangada: Aug-Sept to Jan) & Rabi (Oct-Nov to April)",
+            "target_soil_type": "Friable, deep, well-drained silty clay loams and medium black soils (Niphad, Kalwan)",
+            "suitability_rating": "9.9 / 10 (Global Production Epicenter)",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "100:50:50 (Rabi onion standard)",
+              "organic_manure": "FYM @ 20 tonnes/ha",
+              "secondary_and_micronutrients": "Bentonite Sulphur @ 30-45 kg/ha; Zinc Sulphate @ 20 kg/ha",
+              "application_schedule_and_rationale": "Basal: 33% N + 100% P + 100% K + 100% Sulphur. Remaining N split at 30 and 45 DAT. Nitrogen is halted strictly after 60 DAT to avoid thick necking, vegetative bolting, and storage rotting."
+            }
+          },
+          {
+            "crop_name": "Wine and Table Grapes",
+            "scientific_name": "Vitis vinifera",
+            "growing_season": "Perennial (Foundation pruning: April; Fruit pruning: Sept-Oct)",
+            "target_soil_type": "Gravelly loam to clay loam with sub-surface drainage gradient (Dindori, Niphad)",
+            "suitability_rating": "9.9 / 10 (Wine Capital of India)",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "120:80:160 (fertigated per ha)",
+              "organic_manure": "Composted farm manure @ 15 tonnes/ha or sheep manure @ 5 tonnes/ha",
+              "secondary_and_micronutrients": "Magnesium Sulphate @ 40 kg/ha; Borax @ 10 kg/ha; Zinc Sulphate @ 20 kg/ha",
+              "application_schedule_and_rationale": "Post-April pruning: nitrogen focus for cane growth. Post-October pruning: restricted nitrogen, staged phosphorus for flower induction, and progressive potassium fertigation (SOP) up to veraison to balance Brix and acidity."
+            }
+          },
+          {
+            "crop_name": "Tomato",
+            "scientific_name": "Solanum lycopersicum",
+            "growing_season": "Kharif (June-July to Oct) & Rabi (Oct-Nov to Feb-March)",
+            "target_soil_type": "Well-aerated medium black soils with high organic matter (Girna and Kadva plains)",
+            "suitability_rating": "9.4 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "200:150:150 (for indeterminate hybrids)",
+              "organic_manure": "FYM @ 25 tonnes/ha + Trichoderma @ 5 kg/ha",
+              "secondary_and_micronutrients": "Calcium Nitrate @ 25 kg/ha via drip (curbs Blossom End Rot); Borax @ 10 kg/ha basal",
+              "application_schedule_and_rationale": "Basal: 50% N + 100% P + 50% K; remaining 50% N and 50% K fertigated weekly across the 10-week harvest cycle."
+            }
+          },
+          {
+            "crop_name": "Pomegranate",
+            "scientific_name": "Punica granatum",
+            "growing_season": "Perennial (Ambe Bahar: Jan-Feb flowering; Mrid Bahar: June-July flowering)",
+            "target_soil_type": "Light, gravelly, calcareous to sandy loam soils (Deola, Kalwan, Satana/Baglan)",
+            "suitability_rating": "9.2 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "250:125:150 (~400:200:250 g/tree/year)",
+              "organic_manure": "FYM @ 20 kg/tree + Neem cake @ 2 kg/tree",
+              "secondary_and_micronutrients": "Foliar Zinc EDTA (1 g/L) + Boric Acid (1.5 g/L) at full bloom",
+              "application_schedule_and_rationale": "100% P applied at defoliation/water release. N and K applied in weekly drip splits until 1 month prior to harvest."
+            }
+          },
+          {
+            "crop_name": "Bell Pepper / Capsicum (Polyhouse / Open Field)",
+            "scientific_name": "Capsicum annuum var. grossum",
+            "growing_season": "Year-round (Polyhouse) or Kharif/Rabi (Open Field)",
+            "target_soil_type": "Highly porous sandy clay loam or amended medium black soil (Dindori, Nashik)",
+            "suitability_rating": "9.3 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "180:120:150 (fertigation schedule)",
+              "organic_manure": "Vermicompost @ 10 tonnes/ha or sterilized cocopeat/manure beds",
+              "secondary_and_micronutrients": "Calcium Nitrate @ 40 kg/ha (split weekly); Magnesium Sulphate @ 25 kg/ha",
+              "application_schedule_and_rationale": "Equal weekly fertigation increments. High calcium inputs prevent blossom-end rot under variable vapor pressure deficits."
+            }
+          },
+          {
+            "crop_name": "Lowland Paddy (Rice)",
+            "scientific_name": "Oryza sativa",
+            "growing_season": "Kharif (June-July to Oct-Nov)",
+            "target_soil_type": "Heavy reddish-brown clay loams with low percolation (Igatpuri, Peint, Surgana)",
+            "suitability_rating": "9.2 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "100:50:50",
+              "organic_manure": "Green manuring with Sesbania aculeata incorporated before puddling",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 25 kg/ha basal in puddled soil (prevents Khaira disease)",
+              "application_schedule_and_rationale": "50% N, 100% P, and 100% K incorporated into puddled mud. 25% N at tillering (21-25 DAT) and 25% N at panicle initiation (45-50 DAT)."
+            }
+          },
+          {
+            "crop_name": "Pearl Millet (Bajra)",
+            "scientific_name": "Pennisetum glaucum",
+            "growing_season": "Kharif (Sowing: June-July; Harvest: Sept-Oct)",
+            "target_soil_type": "Shallow, coarse, well-drained sandy loams (Malegaon, Yeola, Chandwad)",
+            "suitability_rating": "9.0 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "60:30:30",
+              "organic_manure": "FYM @ 5 tonnes/ha",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 15 kg/ha",
+              "application_schedule_and_rationale": "50% N + 100% PK at sowing; remaining 50% N top-dressed 30 DAS following intercultivation and rainfall receipt."
+            }
+          },
+          {
+            "crop_name": "Guava",
+            "scientific_name": "Psidium guajava",
+            "growing_season": "Perennial (Mrid Bahar: June flowering; Ambe Bahar: Feb flowering)",
+            "target_soil_type": "Medium black to sandy loam soils with free drainage (pH 6.5 - 8.2)",
+            "suitability_rating": "8.8 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "300:150:150 (600:300:300 g N:P2O5:K2O per bearing tree/year)",
+              "organic_manure": "FYM @ 25 kg/tree + 2 kg neem cake",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 0.5% + Boric Acid @ 0.3% foliar spray at fruit set",
+              "application_schedule_and_rationale": "Delivered in two equal splits: at root pruning/stress breaking (May-June for Mrid Bahar), and during fruit development (September-October)."
+            }
+          },
+          {
+            "crop_name": "Custard Apple (Sitaphal)",
+            "scientific_name": "Annona squamosa",
+            "growing_season": "Monsoon to Early Winter (Flowering: June-July; Harvest: Oct-Dec)",
+            "target_soil_type": "Shallow, gravelly, rocky hillside soils and degraded marginal lands (Sinnar, Chandwad)",
+            "suitability_rating": "9.1 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "125:60:60 (~250:125:125 g N:P2O5:K2O per bearing plant/year)",
+              "organic_manure": "FYM @ 15 kg/plant at monsoon onset",
+              "secondary_and_micronutrients": "Zinc Sulphate @ 0.5% foliar spray at leaf emergence",
+              "application_schedule_and_rationale": "100% P and 50% NK applied at first monsoon rains (June); remaining 50% NK applied during fruit sizing (August-September)."
+            }
+          },
+          {
+            "crop_name": "Methi (Fenugreek) & Leafy Greens",
+            "scientific_name": "Trigonella foenum-graecum",
+            "growing_season": "Rabi (Oct-Feb) & Late Kharif (Aug-Oct) [Rapid 25-35 day short cycles]",
+            "target_soil_type": "Rich loams and medium black soils with rapid seedbed tilth (Nashik, Niphad)",
+            "suitability_rating": "9.5 / 10",
+            "fertilizer_requirements": {
+              "recommended_npk_kg_per_ha": "25:50:00 (Short duration leafy crop)",
+              "organic_manure": "Decomposed compost @ 10 tonnes/ha",
+              "secondary_and_micronutrients": "Sulphur @ 15 kg/ha basal",
+              "application_schedule_and_rationale": "Entire fertilizer applied as basal dose into broadcast beds before sowing. Fenugreek fixes atmospheric nitrogen after initial starter N boost."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

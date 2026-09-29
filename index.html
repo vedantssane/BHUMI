@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHUMI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="language.css">
+</head>
+
+<body>
+
+                <!-- MOBILE TOP BAR -->
+        <div class="mobile-topbar">
+
+            <a href="index.html" class="mobile-brand">
+                <span>🌿</span>
+                <strong>BHUMI</strong>
+            </a>
+
+            <a href="Pages/about.html" class="mobile-about-btn" aria-label="About BHUMI">
+                ⓘ
+            </a>
+
+        </div>
+
+            <!-- MOBILE BOTTOM NAVIGATION -->
+        <nav class="mobile-bottom-nav">
+
+            <a href="index.html" class="mobile-nav-item active">
+                <span class="mobile-nav-icon">⌂</span>
+                <span>Home</span>
+            </a>
+
+            <a href="#farmer-decision" class="mobile-nav-item">
+                <span class="mobile-nav-icon">🌱</span>
+                <span>Grow</span>
+            </a>
+
+            <a href="Pages/database.html" class="mobile-nav-item">
+                <span class="mobile-nav-icon">▤</span>
+                <span>Database</span>
+            </a>
+
+            <a href="Pages/contact.html" class="mobile-nav-item">
+                <span class="mobile-nav-icon">↗</span>
+                <span>Connect</span>
+            </a>
+
+        </nav>
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo" data-bhumi-no-translate>
+                    <span class="hindi">भूमि</span>
+                    <span class="english">BHUMI</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="Pages/about.html" class="nav-link">ABOUT</a>
+                    <a href="Pages/services.html" class="nav-link">SERVICES</a>
+                    <a href="Pages/database.html" class="nav-link">DATABASE</a>
+                    <a href="Pages/contact.html" class="nav-link">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="hero">
+
+            <div class="hero-left">
+                <h1><span class="taggy">“Smarter</span> Farming,<br><span class="bruhh">Better<span class="taggy">
+                            Tomorrow.”</span></span></h1>
+
+                <p>Let's take an initative in this growing world</p>
+
+                <div class="homebtns">
+                    <button id="letsgrow" class="btns">LET'S GROW</button>
+                    <button id="connect" class="btns" onclick="window.location.href='Pages/contact.html'">LET'S
+                        CONNECT</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="farmer-decision" id="farmer-decision">
+
+            <div class="decision-header">
+                <h2>Farmer Decision Panel</h2>
+                <p>
+                    Select your district to get crop recommendations and check
+                    which crops are suitable for your region.
+                </p>
+            </div>
+
+            <div class="district-section">
+
+                <label for="district">District</label>
+
+                <div class="district-input">
+                    <span class="location-icon">⌖</span>
+
+                    <select id="district">
+                        <option value="" disabled selected>Select a district</option>
+                        <option value="sangli">Sangli</option>
+                        <option value="satara">Satara</option>
+                        <option value="nashik">Nashik</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="decision-options">
+
+                <div class="decision-card" id="card-suggested" role="button" tabindex="0">
+
+                    <div class="option-icon">✦</div>
+
+                    <div class="option-content">
+                        <h3>Suggested Crops</h3>
+                        <p>
+                            Let the soil and climate profile recommend what to grow.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="decision-card" id="card-crop-search" role="button" tabindex="0">
+
+                    <div class="option-icon">⌕</div>
+
+                    <div class="option-content">
+                        <h3>Crop I Want to Grow</h3>
+                        <p>
+                            Search a specific crop and check how well it fits here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Interactive Section Opened by Decision Cards -->
+            <div id="decision-result-panel" class="decision-result-panel" style="display: none;">
+                <div class="panel-header">
+                    <h3 id="panel-title">Regional Insights</h3>
+                    <button id="close-panel-btn" class="close-btn" title="Close section">&times;</button>
+                </div>
+                <div id="panel-body"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Huge Card / Crop Dossier Modal -->
+    <div id="crop-modal" class="dossier-modal-overlay" style="display: none;">
+        <div class="huge-crop-card">
+            <button id="modal-close-btn" class="huge-card-close" title="Close">&times;</button>
+            
+            <div class="huge-card-head">
+                <div class="huge-head-tags">
+                    <span class="huge-district-tag" id="modal-district">District</span>
+                    <span class="huge-score-tag" id="modal-rating">Suitability</span>
+                </div>
+                <h2 id="modal-crop-name">Crop Name</h2>
+                <div class="scientific" id="modal-scientific">Scientific Name</div>
+            </div>
+
+            <div class="huge-sections-grid">
+                <div class="huge-info-block">
+                    <h4>🌱 Cultivation Calendar</h4>
+                    <p><strong>Growing Season:</strong> <span id="modal-season"></span></p>
+                    <p><strong>Target Soil Type:</strong> <span id="modal-soil"></span></p>
+                </div>
+
+                <div class="huge-info-block">
+                    <h4>⚖️ Fertilizer Formulation (NPK)</h4>
+                    <div class="npk-badge-strip">
+                        <span class="npk-val" id="modal-npk">NPK</span>
+                        <span class="npk-unit">kg/ha dose</span>
+                    </div>
+                    <p><strong>Organic Manure:</strong> <span id="modal-manure"></span></p>
+                    <p><strong>Secondary & Micronutrients:</strong> <span id="modal-micronutrients"></span></p>
+                </div>
+            </div>
+
+            <div class="huge-full-block">
+                <h4>📋 Application Schedule & Agronomic Rationale</h4>
+                <p id="modal-schedule"></p>
+            </div>
+
+            <div class="huge-card-footer">
+                <button id="modal-done-btn" class="huge-close-btn">Close Information</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
